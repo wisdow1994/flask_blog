@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% import "_macros.html" as macros %}
+
+{% block title %}Flasky - {{ title }}{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>{{ title }}</h1>
+</div>
+<table class="table table-hover followers">
+    <thead><tr><th>用户名</th><th>关注时间</th></tr></thead>
+    {% for follow in follows if follow.user != user %}
+    {#    jinja2中没有continue,满足if条件的会显示出来,目标是是把-用户自己-在关注列表和粉丝列表过滤掉    #}
+    <tr>
+        <td>
+            <a href="{{ url_for('main.user', username = follow.user.username) }}">
+                <img class="img-rounded" src="{{ follow.user.gravatar(size=32) }}">
+                {{ follow.user.username }}
+            </a>
+        </td>
+        <td>{{ moment(follow.timestamp).format('L') }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<div class="pagination">
+    {{ macros.pagination_widget(pagination, endpoint, username = user.username) }}
+</div>
+{% endblock %}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/flask_bolg.iml" filepath="$PROJECT_DIR$/.idea/flask_bolg.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../flask_restfule/.idea/flask_restfule.iml" filepath="$PROJECT_DIR$/../flask_restfule/.idea/flask_restfule.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Flasky - 确认你的账户令牌{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>
+        你好, {{ current_user.username }}!
+    </h1>
+    <h3>您尚未确认您的帐户.</h3>
+    <p>
+        在您访问本网站的内容之前, 需要确认您的帐户.
+        检查您的收件箱, 您应该收到一封带有确认链接的电子邮件.
+    </p>
+    <p>
+        需要重新发送一封确认邮件?
+        <a href="{{ url_for('auth.resend_confirmation') }}">点击此链接</a>
+    </p>
+</div>
+{% endblock %}

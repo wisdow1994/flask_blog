@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block title %}Flasky - 用户资料设置{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>资料设置</h1>
+</div>
+
+<div class="col-md-4">
+    {{ wtf.quick_form(form) }}
+</div>
+{% endblock %}
