@@ -28,7 +28,7 @@ itsdangerous==0.24
 jedi==0.10.2
 Jinja2==2.9.6
 lxml==3.8.0
-Mako==1.0.7
+Mako==1.2.2
 MarkupSafe==1.0
 olefile==0.44
 pickleshare==0.7.4
